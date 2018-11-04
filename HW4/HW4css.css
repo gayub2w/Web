@@ -1,0 +1,53 @@
+#b1{
+	height:100%;
+	width:100%;
+	margin:0;
+	
+}
+
+#text1 {
+	    height: 10%;
+    width: 35%;
+    top: 15%;
+    position: absolute;
+    left: 37%;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Helvatica;
+    font-stretch: condensed;
+}
+	
+
+
+#main1 {
+   height: 10%;
+width: 11%;
+top: 25%;
+position: absolute;
+left: 44%;
+}
+
+#box1 {
+height: 50%;
+width: 165%;
+position: absolute;	
+
+}
+
+#button1 {
+    height: 10%;
+	width: 10%;
+	top: 35%;
+	position: absolute;
+	left: 48%;
+}
+
+#button2 {
+    height: 50%;
+width: 100%;
+position: absolute;
+border-radius: 4px;
+font-size: 125%;
+font-family: Arial;
+background-color: #C0C0C0;
+	}
