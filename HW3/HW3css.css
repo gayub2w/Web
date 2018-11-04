@@ -1,0 +1,268 @@
+#b1{
+	height:100%;
+	width:100%;
+	margin:0;
+	
+}
+a:link {
+    color: white;
+	text-decoration:none;
+	
+	
+}
+
+/* visited link */
+a:visited {
+    color: white;
+	text-decoration:none;
+	
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+	text-decoration:none;
+	
+}
+
+/* selected link */
+a:active {
+    color: white;
+	text-decoration:none;
+	
+}
+#part0 {
+   height: 0.5%;
+width: 100%;
+background-color: #004370;
+bottom: 99.5%;
+position: absolute;
+}
+#part1 {
+	height:8%;
+	width:100%;
+	background-color:white;
+	
+}
+
+#pic1{
+	position:absolute;
+	height: 5%;
+	left: 7%;
+	top: 2%;
+}
+
+#button1 {
+	background-color: #AD1543;
+color: white;
+position: absolute;
+right: 7%;
+top: 2%;
+height: 4%;
+width: 14%;
+border-radius: 5%;
+font-size: 75%;
+font-family: verdana;
+border: white;
+box-shadow: -0.5px -0.5px 0.5px white;
+/* text-shadow: 1px 1px white; */
+cursor: pointer;
+}
+
+#d1p1{
+    text-align: right;
+    font-family: arial;
+    font-size: 80%;
+    color: #0B84CD;
+    font-weight: bold;
+    left: 45%;
+    top: 0%;
+    position: absolute;
+    font-stretch: condensed;
+    line-height: 125%;
+
+}
+
+#part2 {
+	height:40%;
+	width:100%;
+	background-color:#004370;
+	position:relative;
+}
+
+#d2p1{
+text-align: center;
+font-family: Helvetica;
+font-size: 255%;
+color: white;
+font-weight: bold;
+line-height: 100%;
+position: absolute;
+bottom: 46%;
+left: 28%;
+
+}
+
+#d2p2 {
+	    text-align: center;
+    font-family: Arial;
+    font-size: 150%;
+    color: white;
+    position: absolute;
+    bottom: 30%;
+    left: 18%;
+
+}
+
+#button2 
+{
+	background-color: #AD1543;
+color: white;
+position: absolute;
+right: 43%;
+bottom: 15%;
+width: 12%;
+height: 9%;
+border-radius: 5%;
+font-size: 70%;
+font-family: verdana;
+border: white;
+box-shadow: -1px -1px 1px white; 
+text-shadow: 1px 1px white;
+cursor: pointer;	
+}
+#pic2{
+	position: absolute;
+	height: 9%;
+	left: 80%;
+	top: 75%;
+}
+}
+#part3 {
+	height:40%;
+	width:100%;
+	background-color:white;
+	
+}
+	
+#d3p1{
+text-align: center;
+font-family: Arial;
+font-size: 190%;
+color: #0B84CD;
+font-weight: bold;
+line-height: 100%;
+position: absolute;
+top: 44%;
+left: 22%;
+}
+
+#column1 {
+	    position: absolute;
+    top: 65%;
+    left: 30%;
+    width: 30%;
+    font-size: 90%;
+    font-family: Arial;
+    line-height: 115%;
+
+}
+
+#column2 {
+position: absolute;
+top: 65%;
+left: 57%;
+width: 30%;
+font-size: 85%;
+font-family: Arial;
+line-height: 115%;}
+
+em {  /* or .call em, but you should aim for consistency in your styling */
+    font-size: 70%;
+	font-style:normal;
+font-family: Arial;
+}
+
+#pic3{
+	position: absolute;
+height: 3%;
+left: 26%;
+top: 65%;
+}
+#pic4{
+	position: absolute;
+height: 3%;
+left: 26%;
+top: 79%;
+}
+#pic5{
+	position: absolute;
+height: 3%;
+left: 53%;
+top: 65%;
+}
+
+#pic6{
+	position: absolute;
+height: 3%;
+left: 53%;
+top: 79%;
+}
+
+#part4 {
+    height: 1%;
+width: 100%;
+background-color: #0B84CD;
+top: 97%;
+position: absolute;
+}
+
+
+#part5 {
+height: 10%;
+width: 100%;
+background-color: #004370;
+top: 98%;
+position: absolute;
+
+}	
+	
+#d5p1 {
+	text-align: left;
+font-family: Arial;
+font-size: 60%;
+color: white;
+position: absolute;
+top: 0%;
+left: 5%;
+/* text-shadow: 1px 1px white; */
+}
+
+
+#d5p2 {
+	    text-align: left;
+    font-family: Arial;
+    font-size: 45%;
+    color: white;
+    position: absolute;
+    top: 65%;
+    left: 5%;
+	/* text-shadow: 1px 1px white; */
+
+}
+
+#d5hr1{
+top: 46%;
+position: absolute;
+left: 5%;
+width: 90%;
+right: 5%;
+color:#065ace;
+/* text-shadow: 1px 1px white; */
+}
+
+
+#ld {
+	font-size:250%;
+	color: #0B84CD;
+}
