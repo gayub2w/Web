@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="csshw8.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-animate.js"></script>
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+	
+		<!-- <script src="https://code.highcharts.com/highcharts.src.js"></script> -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src ="http://code.jquery.com/jquery-2.1.1.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	
+	
+	
+</head>
+<body background="http://cs-server.usc.edu:45678/hw/hw8/images/background.png" >
+	
+	
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12" style="height:15px"></div>
+		</div>																																																			
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:white; height: 250%; border-radius: 10px;">
+				</br>
+				<div class="row">
+					<div class="col-lg-12 col-sm-12 col-xs-12" > <p style="text-align:center; font-size:15px; "><b>Stock Market Search</b></p></div>
+				</div>
+				
+				<div class="row">
+					<form id= "theForm" method='POST' action="">
+						<div class="form-group">
+							
+							<div class="row">
+						        
+								<div class="col-lg-4 " style="text-align:center" > 
+										
+										<label for="stocksym1"><p style="font-size:13px;" > Enter Stock Ticker Symbol:<span style="color:red;">*</span></p></label>
+										
+								</div>
+								<div class="col-lg-4 " style="text-align:center" >
+									
+										<input type="text" id="stocksym1" class="form-control" placeholder=" e.g. AAPL" >
+										
+								</div>
+											
+								<div class="col-lg-4" style="text-align:center">
+										
+										<button type="button" class="btn btn-primary" onclick="test();"><span class="glyphicon glyphicon-search"></span>  Get Quote </button>
+										<button type="button" class="btn btn-default" onclick="reset_form();"><span class="glyphicon glyphicon-refresh"></span> Clear</button>
+										
+								</div>
+							</div>
+						  </div>
+					</form>
+					</br>
+				</div>
+			
+			
+			
+			
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12" style="height: 5px;"></div>
+		</div>																																																			
+	</div>
+	
+	
+	<div class="container">
+		<div class="row">
+			<hr style="border-color:#C0C0C0; border-width:1px;">
+		</div>																																																			
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12" style="height:5px"></div>
+		</div>																																																			
+	</div>
+	
+	
+	
+	<div id="fav" class="container">
+		<div class="row">
+			<div class="col-sm-12" style="background-color:white; height: 400%; border-radius: 10px;">
+					<div class="container">
+						<h3></h3>
+						<div class="panel panel-default" style="width:97%; left:10%; height:50%">
+						
+						<div class="panel-heading">
+						<div class="row">
+			            <div class="col-lg-4 style="text-align:center" ><b> Favorite List</b></div>
+						<div class="col-lg-4" >  </div>
+						<div class="col-lg-4 style="text-align:right" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Automatic Refresh:&nbsp; <input type="checkbox" data-size="small" data-toggle="toggle">  <button type="reset" class="btn btn-default btn-sm "><span class="glyphicon glyphicon-refresh"></span> </button>  <button type="reset" class="btn btn-default btn-sm "><span class="glyphicon glyphicon-chevron-right"></span> </button></div>
+						
+						</div>
+						</div>
+						<div class="panel-body">
+								<div class="row">
+										<div class="col-lg-4" >  Sort by&nbsp;&nbsp;&nbsp;&nbsp; <span class="dropdown">
+																								  <button class="btn btn-xs btn-default dropdown-toggle" type="button" data-toggle="dropdown">Default &nbsp;&nbsp;&nbsp;&nbsp;
+																								  <span class="caret"></span></button>
+																								  <ul class="dropdown-menu">
+																									<li><a href="#">HTML</a></li>
+																									<li><a href="#">CSS</a></li>
+																									<li><a href="#">JavaScript</a></li>
+																								  </ul>
+																								</span>
+																									
+										
+										</div>
+										<div class="col-lg-4" >  Order&nbsp;&nbsp;&nbsp;&nbsp;     <span class="dropdown">
+																								  <button class="btn btn-xs btn-default dropdown-toggle" type="button" data-toggle="dropdown">Ascending &nbsp;&nbsp;&nbsp;&nbsp;
+																								  <span class="caret"></span></button>
+																								  <ul class="dropdown-menu">
+																									<li><a href="#">Ascending</a></li>
+																									<li><a href="#">Descending</a></li>
+																																															  </ul>
+																								</span>
+										</div>
+										<div class="col-lg-4" > </div>
+								
+								</div>
+								</br>
+								<div class="row">
+								<table class="table table-striped">
+   
+    <tbody>
+      <tr>
+        <td><b>Symbol</b></td>
+        <td><b>Stock Price</b></td>
+        <td><b>Change (Change Percent)</b></td>
+		<td><b>Volume</b></td>
+      </tr>
+     
+      
+    </tbody>
+  </table>
+								</div>
+						
+						
+						</div>
+					  </div>
+					
+			
+			
+			</div>
+			
+			</div>
+		</div>
+	</div>
+	<!--new div with price table and graphs -->
+	<div id="tab" class="container">
+		
+			<div class="row">
+			<div class="col-sm-12" style="background-color:white; height: 600%; border-radius: 10px;">
+					<div class="container">
+						<h3></h3>
+						<div class="panel panel-default" style="width:97%; left:10%; height:50%">
+						
+						<div class="panel-heading">
+						<div class="row">
+			            <div class="col-lg-4" ></button>  <button type="reset" class="btn btn-default btn-sm "><span class="glyphicon glyphicon-chevron-left"></span> </button> </div>
+						<div class="col-lg-4" style ="text-align:center"><b>Stock Details </b></div>
+						<div class="col-lg-4" ></div>
+						</div>
+						
+						</div>
+						<div class="panel-body">
+						<div class="row">
+						<div class="col-lg-6" style="color:#428bca" >
+						<ul class="nav nav-pills">
+						  
+						  <li class="active"><a href="#"><span class="glyphicon glyphicon-dashboard"></span>&nbsp;Current Stock</a></li>
+						  <li><a href="#"><span class="glyphicon glyphicon-stats"></span>&nbsp;Historical Charts</a></li>
+						  <li><a href="#"><span class="glyphicon glyphicon-link"></span>&nbsp;News Feed</a></li>
+						</ul>
+						</div>
+						<div class="col-lg-6" ></div>
+						<!--
+			            <div class="col-lg-2" style="color:#428bca" ><span class="glyphicon glyphicon-dashboard"></span>&nbsp;Current Stock</div>
+						<div class="col-lg-2" style="color:#428bca"><span class="glyphicon glyphicon-stats"></span>&nbsp;Historical Charts</div>
+						<div class="col-lg-2" style="color:#428bca"><span class="glyphicon glyphicon-link"></span>&nbsp;News Feed</div>
+						<div class="col-lg-2" ></div>
+						<div class="col-lg-2" ></div>
+						<div class="col-lg-2" ></div>
+						-->
+						</div>
+						<div class="row">
+						
+						<hr style="border-color:#e0e0e0; border-width:1px;">
+						<div class="col-lg-6">
+						<div class="row">						
+						<div class="col-lg-6" ><b>Stock Details</b></div>
+						<div class="col-lg-6" style="text-align:right"><button type="reset" class="btn btn-default btn-sm "><span class="glyphicon glyphicon-star-empty gi-2x"></span></button>&nbsp;&nbsp;<button type="reset" class="btn btn-default btn-md "><i class="fa fa-facebook-square fa-2x" aria-hidden="true" style="color:#275379"></i></button></div>
+						</div>
+						</br>
+							<table class="table table-striped">
+						   
+							<tbody>
+							  
+							  <tr>
+								<td><b>Stock Ticker Symbol</b></td>
+								<td id="tabstksym"></td>
+							  </tr>
+							  <tr>
+								<td><b>Last Price</b></td>
+								<td id="tabprice"></td>
+							  </tr>
+							  <tr>
+								<td><b>Change(Change Percent)</b></td>
+								<td id="tabchange"></td>
+							  </tr>
+							  <tr>
+								<td><b>Timestamp</b></td>
+								<td id="tabtime"></td>
+							  </tr>
+							  <tr>
+								<td><b>Open</b></td>
+								<td id="tabopen"></td>
+							  </tr>
+							  <tr>
+								<td><b>Close</b></td>
+								<td id="tabclose"></td>
+							  </tr>
+							  <tr>
+								<td><b>Day's range</b></td>
+								<td id="tabrange"></td>
+							  </tr>
+							  <tr>
+								<td><b>Volume</b></td>
+								<td id="tabvol"></td>
+							  </tr>
+							  
+							  
+							 
+							  
+							</tbody>
+						  </table>
+						
+						
+						</div>
+					<!-- charts div-->	
+						<div class="col-lg-6">
+						<div class="row">
+						<ul class="nav nav-tabs">
+						  <li class="active"><a href="#">Price</a></li>
+						  <li><a href="#" onclick="indicators(this.innerHTML);">SMA</a></li>
+						  <li><a href="#" onclick="indicators(this.innerHTML);">EMA</a></li>
+						  <li><a href="#" onclick="indicators(this.innerHTML);">STOCH</a></li>
+						  <li><a href="#" onclick="indicators(this.innerHTML);">RSI</a></li>
+						  <li><a href="#" onclick="indicators(this.innerHTML);">ADX</a></li>
+						  <li><a href="#" onclick="indicators(this.innerHTML);">CCI</a></li>
+						  <li><a href="#" onclick="indicators(this.innerHTML);">BBANDS</a></li>
+						  <li><a href="#" onclick="indicators(this.innerHTML);">MACD</a></li>
+						</ul>
+						<div>
+						<div id = "chart" class ="row" >
+						
+						</div>
+					</div>
+								
+								
+						
+						
+						</div>
+					  </div>
+					
+			
+			
+			</div>
+			
+			</div>
+		</div>
+		
+	
+	</div>
+
+	
+	
+	<script src="hw8javs.js"></script>
+
+
+
+
+
+
+
+	
+</body>
+</html>
